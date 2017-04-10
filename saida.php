@@ -9,6 +9,7 @@ $notaVA3 = $_REQUEST['notaVA3'];
 $notaTrab = $_REQUEST['notaTrab'];
 $professor = $_REQUEST['professor'];
 $coordenador = $_REQUEST['coordenador'];
+$lado = $_REQUEST['lado'];
 $conceito = "";
 $msg = "";
 $resultado = $notaVA1 + $notaVA2 + $notaVA3 + $notaTrab;
@@ -16,6 +17,9 @@ $desempenho1 = ($notaVA1*100)/15;
 $desempenho2 = ($notaVA2*100)/25;
 $desempenho3 = ($notaVA3*100)/35;
 $desempenhoT = ($notaTrab*100)/25;
+
+$perimetro = $lado * 4;
+$area = $lado * $lado;
 
 
 if ($resultado >= 90) {
@@ -169,6 +173,19 @@ else{
         						</center>
         					</div>
         				</div>
+
+
+                        <div class="row" style="margin-top: 6%;">
+                            <div class="col-lg-6">
+                                <label class="badge badge-success">Perimetro</label>:
+                                <span><?php echo $perimetro; ?></span>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="badge badge-danger">Area</label>:
+                                <span><?php echo $area; ?></span>
+                            </div>
+                        </div>
         			</div>
         		</div>
         	</div>
